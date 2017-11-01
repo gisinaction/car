@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>电动汽车无线充电后台管理</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="cxy ccy wjj xkl">
+  <link rel="stylesheet" type="text/css" href="css/main.css" >
+  <link rel="stylesheet" type="text/css" href="css/topbar.css">
+  <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="css/maincontent.css">
+  <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+  <script src="js/main.js"></script>
+</head>
+<body>
+	<!--顶部导航栏-->
+	<div class="topbar-wrap clearfix">
+      <div class="topbar-inner clearfix">
+      	<div class="topbar-logo-wrap clearfix">
+      	  <div class="topbar-logo-inner clearfix">
+      	  	<img src="images/topbarlogo1.png" width="80" height="50" alt="topbarlogo">
+      	  	<h1>电动汽车无线充电后台管理</h1>
+      	  </div>
+      	</div>
+      	<div class="welcome-wrap clearfix">
+      	  <ul>
+      	  	<li class="welcome">欢迎您，尊敬的用户！</li>
+      	  	<li class="exit">
+      	  	<img src="images/logout.png"  alt="logout"><a href="login.html">退出</a>
+      	  	</li>
+      	  </ul>
+      	</div>
+      </div> 
+	</div>
+	<!--顶部导航栏-->
+	
+	<!-- 下部主要界面 -->
+	<div class="container clearfix">
+	  <!-- 侧部导航栏 -->
+	  <div class="sidebar-wrap clearfix">
+	    <div class="sidebar-menu">
+	      <h1>菜单</h1>
+	    </div>
+	    <div class="sidebar-content">
+	      <h3 class="subNav" id="101"><i class="iconfont ">&#xe626;</i>用户信息管理</h3>
+	      <div class="navContent" id="1" style="display: none">
+		    <ul>
+		      <li><a href="userself-insert.html"><i class="iconfont">&#xe602;</i>信息添加</a></li>
+		      <li><a href="userself-check.html"><i class="iconfont">&#xe64f;</i>信息查询</a></li>
+		    </ul>
+	      </div>
+	      <h3 class="subNav" id="102"><i class="iconfont">&#xe623;</i>车辆信息查询</h3>
+	      <div class="navContent" id="2" >
+		    <ul>
+		      <li><a href="carself-check.html"><i class="iconfont">&#xe64f;</i>信息查询</a></li>
+		    </ul>
+	      </div>
+	      <h3 class="subNav" id="103"><i class="iconfont">&#xe623;</i>停车场信息查询</h3>
+	      <div class="navContent" id="3" style="display: none">
+		    <ul>
+		      <li><a href="placeself-check.html"><i class="iconfont">&#xe64f;</i>信息查询</a></li>
+		    </ul>
+	      </div>
+	      <h3 class="subNav" id="cPs"><a href="self-changePS.html"><i class="iconfont">&#xe615;</i>修改密码</a></h3>
+	    </div>
+	    
+	  </div>
+	  <!-- 侧部导航栏 -->
+	    
+	  <!-- 右部界面 -->
+	  <div class="main-wrap clearfix">
+		<!-- 时间条 -->
+		<div class="timebar">
+		  <div class="timer" >
+		  	<span id="time-day"></span>
+		  </div>
+		  <div class="timer" >
+		  	<span id="time-month"></span>
+		  </div>
+		  <div class="timer" >
+		  	<span id="time-year"></span>
+		  </div>
+		</div>
+		<!-- 时间条 -->
+		<!-- 车辆信息查询 -->
+      <div class="check-wrap">
+	  	<div class="check-content">
+	  	  <form action="#" name="echeckForm" id="echeckForm" method="post">
+	  	  	<table class="check-tab">
+	  	  	  <tbody>
+	  	  	  	<tr>
+	  	  	  	  <th width="120">选择查找分类</th>
+	  	  	  	    <td>
+	  	  	  	      <select name="search-sort" id="search-sort">
+	  	  	  	      	<option value="name">车牌号</option>
+	  	  	  	      </select>
+	  	  	  	    </td>
+	  	  	  	    <th width="70">关键字：</th>
+	  	  	  	    <td>
+	  	  	  	      <input type="text" name="keywords" class="common-text" placeholder="请输入关键字">
+	  	  	  	    </td>
+	  	  	  	    <td>
+	  	  	  	      <input type="submit" name="sub" value="查询" class="btn ">
+	  	  	  	    </td>
+	  	  	  	</tr>
+	  	  	  </tbody>
+	  	  	</table>
+	  	  </form>
+	  	</div>
+	  
+		  <div class="result-wrap">
+		  	<div class="result-content">
+		  	  <form action="#" name="eresultFrom" id="eresultFrom" method="post">
+		  	  	<div class="result-title">
+		  	  	  
+		  	  	  <a href="#" id="batchDel">批量删除</a>
+		  	  	</div>
+		  	  	<div class="result-content">
+		  	  	  <table id="resultTable">
+		  	  	  	<thead>
+	                  <tr>
+			            <th><label><input class="check-all check" type="checkbox"/>&nbsp;全选</label></th>
+			            <th>车牌号</th>
+			            <th>车辆状态</th>
+			            <th>品牌</th>
+			            <th>电量</th>
+			            <th>停车位</th>
+			            <th>停车时间/小时</th>
+						<th>充电时间/小时</th>
+			            <th>操作</th>
+	                  </tr>
+	    			</thead>
+	    			<tbody>
+	    			  <tr>
+	    			  	<td class="checkbox"><input type="checkbox" class="check"></td>
+	    			  	<td class="car_id"><span>川A343434</span></td>
+	    			  	<td class="car_status"><span>1充电</span></td>
+	    			  	<td class="car_brand"><span>劳斯莱斯</span></td>
+	    			  	<td class="car_electricity"><span>30</span></td>
+	    			  	<td class="park_id"><span>23</span></td>
+	    			  	<td class="park_time"><span>2</span></td>
+	    			  	<td class="charge_time"><span>1</span></td>
+	    			  	<td class="operation"><span class="delete">删除</span></td>
+	    			  </tr>
+	    			   <tr>
+	    			  	<td class="checkbox"><input type="checkbox" class="check"></td>
+	    			  	<td class="car_id"><span>川A343434</span></td>
+	    			  	<td class="car_status"><span>1充电</span></td>
+	    			  	<td class="car_brand"><span>劳斯莱斯</span></td>
+	    			  	<td class="car_electricity"><span>30</span></td>
+	    			  	<td class="park_id"><span>23</span></td>
+	    			  	<td class="park_time"><span>2</span></td>
+	    			  	<td class="charge_time"><span>1</span></td>
+	    			  	<td class="operation"><span class="delete">删除</span></td>
+	    			  </tr>
+	    			   <tr>
+	    			  	<td class="checkbox"><input type="checkbox" class="check"></td>
+	    			  	<td class="car_id"><span>川A343434</span></td>
+	    			  	<td class="car_status"><span>1充电</span></td>
+	    			  	<td class="car_brand"><span>劳斯莱斯</span></td>
+	    			  	<td class="car_electricity"><span>30</span></td>
+	    			  	<td class="park_id"><span>23</span></td>
+	    			  	<td class="park_time"><span>2</span></td>
+	    			  	<td class="charge_time"><span>1</span></td>
+	    			  	<td class="operation"><span class="delete">删除</span></td>
+	    			  </tr>
+	    			  
+	    			</tbody>
+		  	  	  </table>
+		  	  	</div>
+		  	  </form>
+		  	</div>
+		  </div>
+      </div>
+	  <!-- 车辆信息查询 -->
+	  <!-- 右部界面 -->
+	</div>
+	<!-- 下部主要界面 -->
+</body>
+</html>

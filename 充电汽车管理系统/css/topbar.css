@@ -1,0 +1,49 @@
+.topbar-wrap {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 50px;
+  background: #08A2BA;
+  overflow: hidden;
+}
+.topbar-logo-wrap {
+  float: left;
+  margin-left: 20px;
+}
+.topbar-logo-wrap img {
+  float: left;
+  margin-right: 10px;
+}
+.topbar-logo-inner h1 {
+  font-size: 1em;
+  font-family: tahoma,arial,sans-serif;
+  font-weight: lighter;
+  float: left;
+  line-height: 50px; 
+  color: white;
+}
+.welcome-wrap {
+  float: right;
+  margin-right: 60px;
+}
+.welcome-wrap li {
+  float: left;
+  margin-left: 100px;
+  line-height: 50px;
+  color: white;
+}
+.welcome-wrap li img {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.welcome-wrap .exit a {
+  color: white;
+}
+.welcome-wrap .exit a:hover {
+  color: red;
+}
+.sidebar-content {
+	color: white;
+}

@@ -1,0 +1,136 @@
+.main-wrap {
+  width: 1142px;
+  float: left;
+  height: 699px;
+  border: 1px solid #BDB9B9;
+  position: relative;
+}
+.timebar {
+  height: 4%;
+  width: 100%;
+  background: #D8D5D5;
+  position: relative;
+}
+.timer {
+  float: right;
+  width: 56px;
+  height: 100%;
+}
+.timer span {
+ display: block;
+ text-align: center;
+}
+.insert-wrap,.change-wrap,.check-wrap {
+  padding: 10px 20px;
+  width: 100%;
+  height: 93%;
+  border-bottom: 1px solid black;
+}
+.insert-tab,.psTab {
+  border-collapse: collapse;
+  border: 1px solid #eee;
+  border-spacing: 0;
+  width: 100%;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+label {
+  font: 14px/20px Verdana,Simsun,Helvetica,Arial,sans-serif;
+
+}
+.insert-tab th,.psTab th,.check-tab th {
+  text-align: right;
+  font-weight: normal;
+  padding-right: 10px;
+  font-size: 14px;
+  width: 150px;
+}
+.insert-tab th, .insert-tab td,.psTab th,.psTab td,{
+  border: 1px solid #eee;
+}
+.insert-tab tr,.psTab tr,.check-tab tr {
+    line-height: 40px;
+}
+.required-red {
+  color: #f60;
+  font-family: serif;
+  margin-right: 3px;
+}
+input ,select{
+  font: 14px/20px Verdana,Simsun,Helvetica,Arial,sans-serif;
+  height: 25px;
+}
+#park_flag , #park_status,#car_status {
+  vertical-align: middle;
+}
+select{
+  border-radius: 0px;
+  border-color: rgb(169, 169, 169);
+}
+#sex,#situation {
+  height: 15px;
+}
+.btn {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+  background-color: #006dcc;
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn6 {
+  color: black;
+  background: white;
+}
+.check-content {
+  border-bottom: 1px solid #B6B0B0;
+}
+.result-wrap {
+  padding: 10px 20px;
+  width: 100%;
+  height: 93%;
+}
+#resultTable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+  width: 937px; 
+}
+.result-title a {
+  color: #428bca;
+  margin-right: 15px;
+}
+.result-title a:hover {
+  color: #190489;
+}
+#resultTable td {
+  border: 1px solid #CADEFF;
+}
+#resultTable th {
+  background: #e2f2ff;
+  border-top: 3px solid #a7cbff;
+  height: 30px;
+}
+#resultTable td {
+  padding: 10px;
+  color: #444;
+}
+ #resultTable tbody tr:hover {
+  background: RGB(238,246,255);
+}
+.checkbox {
+  width: 60px;
+}
+.check-all {
+  vertical-align: middle;
+}
+.operation {
+  cursor: pointer;
+}
+.operation span:hover {
+  color: red;
+}

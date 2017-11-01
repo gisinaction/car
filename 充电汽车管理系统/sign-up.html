@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>无线充电汽车后台管理</title>
+    <link href="css/signup.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <script type="text/javascript">  
+      //校验用户名  
+      function check_name(){  
+        var input = document.getElementById("name");  
+        var span = document.getElementById("name_msg");  
+        var name = input.value;  
+        //正则表达式  
+        var reg = /^\w{3,10}$/;  
+        if(!reg.test(name)){  
+            //如果不匹配增加错误样式  
+            //className属性等价于元素的class  
+            span.className = "error_msg";  
+            return false;  
+        }else{  
+            //如果匹配,移除错误样式  
+            span.className = "";  
+            span.style.display='none';
+            return true;  
+        }  
+      }  
+      //校验密码  
+      function check_pwd(){  
+        var input = document.getElementById("pwd");  
+        var span = document.getElementById("pwd_msg");  
+        var pwd = input.value;  
+        var reg = /^\w{6,20}$/;  
+        if(!reg.test(pwd)){  
+            span.className = "error_msg";  
+            return false;  
+        }else{  
+            span.className = ""; 
+            span.style.display='none';
+            return true;  
+        }  
+      }  
+      function success() {
+        if ((check_name()+check_pwd())==2) {
+                  alert("恭喜！注册成功");
+              }               
+        else {
+          alert("输入有误！请重新输入");
+        }
+            
+      }
+    </script>  
+<div class="signup-wrap">
+    <h1>注册</h1>
+    <div class="signup_border">
+        <div class="admin_input">
+            <form action="login.html" onsubmit="return (check_name()+check_pwd())==2">    
+                  <p>  
+                    帐号：  
+                    <input type="text" onblur="check_name()" id="name"/>  
+                    <span id="name_msg" style="display: inline">3-10个字母、数字、下划线</span>  
+                  </p>  
+                  <p>  
+                    密码：  
+                    <input type="password" onblur="check_pwd()" id="pwd"/>  
+                    <span id="pwd_msg" style="display: inline">6-20个字母、数字、下划线</span>  
+                  </p> 
+                  <p>
+                    手机：
+                    <input type="text"  id="phn"/>  
+                    <span id="phn_msg" style="display: inline"></span>  
+                  </p>
+                  <div class="userType">
+                      <label ><input type="radio" name="userType" >管理员</label>
+                      <label ><input type="radio" name="userType" checked="checked">用户</label> 
+                  </div>
+                  
+                 <div class="btn">  
+                   <input type="submit" value="注册" onclick="success()" class="signup-sb" />  
+                 </div>  
+            </form>  
+        </div>
+    </div>
+    <p class="admin_copyright">&copy; 2017 Powered by <a href="#" target="_blank">MVP</a></p>
+</div>
+</body>
+</html>

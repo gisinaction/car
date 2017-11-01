@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>无线充电汽车后台管理</title>
+    <link href="css/admin_login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <script type="text/javascript">  
+      //校验用户名  
+      function check_name(){  
+        var input = document.getElementById("name");  
+        var span = document.getElementById("name_msg");  
+        var name = input.value;  
+        //正则表达式  
+        var reg = /^\w{3,10}$/;  
+        if(!reg.test(name)){  
+            //如果不匹配增加错误样式  
+            //className属性等价于元素的class  
+            span.className = "error_msg";  
+            return false;  
+        }else{  
+            //如果匹配,移除错误样式  
+            span.className = "";  
+            span.style.display='none';
+            return true;  
+        }  
+      }  
+      //校验密码  
+      function check_pwd(){  
+        var input = document.getElementById("pwd");  
+        var span = document.getElementById("pwd_msg");  
+        var pwd = input.value;  
+        var reg = /^\w{6,20}$/;  
+        if(!reg.test(pwd)){  
+            span.className = "error_msg";  
+            return false;  
+        }else{  
+            span.className = ""; 
+            span.style.display='none';
+            return true;  
+        }  
+      }  
+      /*管理员登录验证  登录名：admin  密码：123456*/ 
+      function success() {
+         var temp=document.getElementsByName("userType");
+         var name=document.getElementById('name').value;
+         var pwd=document.getElementById('pwd').value;
+         var form=document.getElementById('form1');
+         var flag1=0;
+         var flag2=0;
+         var flag3=0;
+              if(temp[0].checked) {
+              flag1=1;
+              }
+             if ((check_name()+check_pwd())==2) {
+                flag2=1;
+             }
+              if ((name=="admin")&&(pwd=="123456")) {
+                flag3=1;
+              }
+            if ((flag1==0)&&(flag2==1)) {
+               form.action="user-index.html"
+            }
+         if (((flag1==1)&&(flag2==1)&&(flag3==1))||((flag1==0)&&(flag2==1))) {
+            alert("恭喜！登录成功！");
+            return true;
+         }
+         else {
+            alert("登录失败，请重新输入");
+            return false;
+         }
+
+      }
+    </script>  
+<div class="admin_login_wrap">
+    <h1>无线充电汽车后台管理</h1>
+    <div class="adming_login_border">
+        <div class="admin_input">
+            <form action="index.html" onsubmit="return success()" id="form1">    
+                  <p>  
+                    帐号：  
+                    <input type="text" onblur="check_name()" id="name"/>  
+                    <span id="name_msg" style="display: inline">3-10个字母、数字、下划线</span>  
+                  </p>  
+                  <p>  
+                    密码：  
+                    <input type="password" onblur="check_pwd()" id="pwd"/>  
+                    <span id="pwd_msg" style="display: inline">6-20个字母、数字、下划线</span>  
+                  </p> 
+                  <div class="userType">
+                      <label ><input type="radio" name="userType" checked="checked">管理员</label>
+                      <label ><input type="radio" name="userType">用户</label> 
+                  </div>
+                  <div class="sign-up">
+                      <a href="sign-up.html">注册</a>
+                  </div>
+                 <div class="btn">  
+                   <input type="submit" value="登录"  class="login-sb" />  
+                 </div>  
+            </form>  
+        </div>
+    </div>
+    <p class="admin_copyright">&copy; 2017 Powered by <a href="#" target="_blank">MVP</a></p>
+</div>
+</body>
+</html>

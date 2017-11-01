@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font: tahoma,arial,sans-serif;
+  color: black;
+  display: block;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:link {
+  color: #666;
+}
+a:visited {
+  color: #666;
+}
+a:hover {
+  color: #f10215;
+}
+li {
+  list-style: none;
+}
+.clear{clear:both}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom:1;}
+h1 {
+	font-weight: 300;
+	font-size: 21px;
+}
+h3 {
+	font-weight: 300;
+	font-size: 17px;
+}

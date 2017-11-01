@@ -1,0 +1,73 @@
+@charset "utf-8";
+* {
+	margin:0;padding:0;
+}
+body {
+	font:14px/1.5 '微软雅黑';background:#f9f9f9;
+	background: url(../images/signupbg.jpg);
+	background-size: 100%,100%;
+}
+a {
+	color:#00007F;text-decoration:none;
+}
+a:hover {
+	color:#bd0a01;text-decoration:underline;
+}
+h1 {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-family:'微软雅黑';
+	font-size: 22px;
+	font-style: normal;
+}
+.signup-wrap {
+	margin:0 auto;width:312px;
+	margin-top: 10%;
+	box-shadow:1px 2px 3px #ccc;
+	border:1px solid #eee;background:#fff;
+	padding:0 5px 15px;
+	overflow:hidden;
+	background: rgba(238,235,235,0.5);
+	width: 500px;
+}
+
+.admin_copyright{
+	color:#585858;margin-top:10px;font-family:Arial;text-align:center;
+}
+.admin_copyright a:link,.admin_copyright a:visited{
+	color:#f90;
+}
+.admin_copyright a:hover{
+	color:#f90;
+}
+
+.admin_input input{
+	border:1px solid #e6e6e6;background:#fff;padding:3px;height:20px;line-height:30px;font-family:Arial;color:#666;border-radius:5px;transition-duration:0.3s;margin-bottom: 20px;
+}
+.admin_input span :focus{
+	border-color: rgba(82, 168, 236, 0.8);box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);background:#f8f8f8;
+}
+
+.userType {
+	margin-left: 60px;
+	margin-top: -10px;
+	float: left;
+}
+.userType label {
+	margin-left: 10px;
+}
+.error_msg{    
+    color:red;  
+}
+.btn input {
+    background: #688CBA;
+    color: white;
+    height: 40px;
+    width: 200px;
+    margin:20px 100px;
+    cursor: pointer;
+}
+form {
+	margin-left:  40px;
+}
