@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>无线充电汽车欢迎界面</title>
+	<meta name="author" content="cxy,ccy,wjj,xkl">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/cart.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/succeed.css">
+	
+	<link rel="stylesheet" href="iconfont/iconfont1/iconfont.css">
+	<script src="js/succeed.js"></script>
+	<script src="js/cart.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- 导航条 -->
+		<div class="header" id="header">
+			<div class="container header-container">
+				<span><img src="images/logo4.png" alt="logo" class="logo"></span>
+				<div class="nav-container">
+					<div class="nav-item" id="nav-item1" >
+						<a class="nav-line" href="welcome.html"><i class="iconfont">&#xe603;</i> <span>解决方案</span></a>
+						<div class="nav-droplist d1" id="nav-droplist1" style="display: none;background: #E6DFDF;">
+						<ul>
+							<li id="l1">充电桩销售</li>
+							<li id="l2">后台数据管理系统</li>
+						</ul>
+						</div>
+					</div>
+					<div class="nav-item" id="nav-item2">
+						<a class="nav-line" href="pile.html"><i class="iconfont">&#xe634;</i> <span>产品</span></a>
+						<div class="nav-droplist d2" id="nav-droplist2" style="display: none;background: #E6DFDF;">
+							<ul>
+								<li>充电桩</li>
+								<li>充电器</li>
+							</ul>
+						</div>
+					</div>
+                    <div class="nav-item" id="nav-item3">
+						<a class="nav-line" href="succeed.html"><i class="iconfont">&#xe618;</i> <span>成功案例</span></a>
+					</div>
+					<div class="nav-item" id="nav-item4">
+						<a class="nav-line" href="welcome.html"><i class="iconfont">&#xe60e;</i> <span>近期动态</span></a>
+					</div>
+					<div class="nav-item" id="nav-item5">
+						<a class="nav-line" href="welcome.html"><i class="iconfont">&#xe6ac;</i> <span>关于我们</span></a>
+					</div>
+				</div>
+				   <div class="loginsign">
+						<div class="stit">
+							<i class="iconfont">&#xe600;</i><a href="">登录</a>
+							|
+							<i class="iconfont">&#xe660;</i><a href="">注册</a>
+						</div>
+					</div>
+				
+			</div>
+		</div>
+		<!-- 导航条 -->
+        <!-- 购物车 -->
+        <table id="cartTable">
+		    <thead>
+		        <tr>
+		            <th><label><input class="check-all check" type="checkbox"/>&nbsp;全选</label></th>
+		            <th>商品</th>
+		            <th>单价</th>
+		            <th>数量</th>
+		            <th>小计</th>
+		            <th>操作</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr>
+		            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+		            <td class="goods"><img src="images/black-station.png" alt=""/><span>P1000充电桩标准型</span></td>
+		            <td class="price">2500</td>
+		            <td class="count">
+		                <span class="reduce"></span>
+		                <input class="count-input" type="text" value="1"/>
+		                <span class="add">+</span></td>
+		            <td class="subtotal">2500</td>
+		            <td class="operation"><span class="delete">删除</span></td>
+		        </tr>
+		        <tr>
+		            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+		            <td class="goods"><img src="images/便携式充电器.jpg" alt=""/><span>便携式充电器国标</span></td>
+		            <td class="price">1500</td>
+		            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+		            <td class="subtotal">1500</td>
+		            <td class="operation"><span class="delete">删除</span></td>
+		        </tr>
+		    </tbody>
+		</table>
+
+		<div class="foot" id="foot">
+		    <label class="fl select-all"><input type="checkbox" class="check-all check"/>&nbsp;全选</label>
+		    <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+		    <div class="fr closing">结 算</div>
+		    <div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+		    <div class="fr selected" id="selected">已选商品
+		        <span id="selectedTotal">0</span>件
+		        <span class="arrow up">︽</span>
+		        <span class="arrow down">︾</span>
+		    </div>
+		    <div class="selected-view">
+		        <div id="selectedViewList" class="clearfix">
+		            <!--<div><img src="images/1.jpg"><span>取消选择</span></div>-->
+		        </div>
+		        <span class="arrow">◆<span>◆</span></span>
+		    </div>
+		</div>
+        <!-- 购物车 -->
+        
+	</div>
+</body>
+</html>

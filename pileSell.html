@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>无线充电汽车欢迎界面</title>
+	<meta name="author" content="cxy,ccy,wjj,xkl">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/succeed.css">
+	<link rel="stylesheet" href="css/sell.css">
+	<link rel="stylesheet" href="iconfont/iconfont1/iconfont.css">
+	<script src="js/price1.js"></script>
+	<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/jquery.fly.min.js"></script>
+    <script src="js/requestAnimationFrame.js"></script>
+    <!--[if lte IE 9]>
+<script src="requestAnimationFrame.js"></script>
+<![endif]-->
+<script>
+$(function() {
+	var offset = $("#end").offset();
+	$(".addcar").click(function(event){
+		var addcar = $(this);
+		// var img = addcar.parent().find('img').attr('src');
+		var flyer = $('.u-flyer');
+		flyer.css("display","block");
+		flyer.fly({
+			start: {
+				left: event.pageX,
+				top: event.pageY
+			},
+			end: {
+				left: offset.left+12,
+				top: offset.top+12,
+				width: 0,
+				height: 0
+			},
+			onEnd: function(){
+				$("#msg").show().animate({width: '250px'}, 200).fadeOut(1000);
+				addcar.css("cursor","default").removeClass('orange').unbind('click');
+				this.destory();
+			}
+		});
+	});
+  
+});
+</script>
+</head>
+<body>
+   <style type="text/css">
+    html {
+    	background: url('images/bg6.jpg');
+    }
+   </style>
+	<div class="wrapper">
+		<!-- 导航条 -->
+		<div class="header" id="header">
+			<div class="container header-container">
+				<span><img src="images/logo4.png" alt="logo" class="logo"></span>
+				<div class="nav-container">
+					<div class="nav-item" id="nav-item1" >
+						<a class="nav-line" href="welcome.html"><i class="iconfont">&#xe603;</i> <span>解决方案</span></a>
+						<div class="nav-droplist d1" id="nav-droplist1" style="display: none;background: #E6DFDF;">
+						<ul>
+							<li id="l1">充电桩销售</li>
+							<li id="l2">后台数据管理系统</li>
+						</ul>
+						</div>
+					</div>
+					<div class="nav-item" id="nav-item2">
+						<a class="nav-line" href="pile.html"><i class="iconfont">&#xe634;</i> <span>产品</span></a>
+						<div class="nav-droplist d2" id="nav-droplist2" style="display: none;background: #E6DFDF;">
+							<ul>
+								<a href="pile.html"><li>充电桩</li></a>
+								<a href="pile.html"><li>充电器</li></a>
+							</ul>
+						</div>
+					</div>
+                    <div class="nav-item" id="nav-item3">
+						<a class="nav-line" href="succeed.html"><i class="iconfont">&#xe618;</i> <span>成功案例</span></a>
+					</div>
+					<div class="nav-item" id="nav-item4">
+						<a class="nav-line" href="welcome.html"><i class="iconfont">&#xe60e;</i> <span>近期动态</span></a>
+					</div>
+					<div class="nav-item" id="nav-item5">
+						<a class="nav-line" href="welcome.html"><i class="iconfont">&#xe6ac;</i> <span>关于我们</span></a>
+					</div>
+				</div>
+				   <div class="loginsign">
+						<div class="stit">
+							<i class="iconfont">&#xe600;</i><a href="">登录</a>
+							|
+							<i class="iconfont">&#xe660;</i><a href="">注册</a>
+						</div>
+					</div>
+				
+			</div>
+		</div>
+		<!-- 导航条 -->
+        <!-- 销售品内容 -->
+        <div class="sellWrap">
+        	<div sellInner>
+        		<!--放大效果-->
+				  <div id="demo">
+				         <div id="small-box"> 
+				            <div id="float-box"></div>
+				            <div id="mark"></div>
+				            <img  src="images/black-station.png" width="400"height="300"alt="充电桩"   />
+
+				        </div>
+
+				        <div id="big-box">
+				          <img src="images/black-station.png" width="800"height="600"alt="放大图片" />
+				        </div>
+				  </div>
+				        		
+				  <div class="productS">
+        			<h2>国标交流充电桩 P1000</h3>
+        			<p>国标交流充电桩P5000系列,可兼容市面上所有的符合国标的电动汽车</p>
+        			<p>全面支持3.3kW、7kW、21kW、40kW主流充电功率</p>
+        			<p>适用于商场、酒店、办公楼、住宅等公共停车场</p>
+        			<div class="price" id="price">
+        				<ul>
+        					<li><span>专享价：</span><strong id="price1">¥2500.00</strong></li>
+        				</ul>
+        				<div class="sign">专享优惠</div>
+        			</div>
+        			<form action="" method="post">
+        				<div class="place" >
+        					<span>配送至：</span>
+        					<input type="text" value="请输入配送地址">
+        				</div>
+        				<div class="ptype" id="ptype">
+        					<span>请选择类型：</span>
+        					<label><input type="radio" name="pType" id="pType1" checked="">标准型</label>
+          		  	  	    <label><input type="radio" name="pType" id="pType2">迷你型</label>
+        				</div>
+        				<div class="count">
+        					<span>数量：</span>
+        					<i class="reduce" id="reduce"></i><input class="count-input" id="count-input"type="text" value="1"/><i class="add"id="add">+</i>
+        				</div>
+        				
+        				<div  class="butto orange addcar" >加入购物车</div>
+        				<div class="buy">
+        					<input value="立即购买" type="submit">
+        					<img  class="u-flyer"src="images/black-station.png" style="display: none"width="50"height="50"alt="充电桩"   />
+        				</div>
+        			</form>
+        		</div>
+        	</div>
+        </div>
+        <!-- 销售品内容 -->
+        <!-- 购物车侧边栏 -->
+         <div class="m-sidebar">
+			<div class="cart">
+				<i id="end"></i>
+				<span><a href="sCart.html">购物车</a></span>
+			</div>
+		</div>
+	    <div id="msg">已成功加入购物车！</div>
+        <!-- 购物车侧边栏 -->
+        
+	</div>
+</body>
+</html>

@@ -1,0 +1,282 @@
+
+.sellWrap {
+	width: 1200px;
+	height: 700px;
+	margin: 0 auto;
+	position: relative;
+}
+.sellInner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.productS {
+	width: 500px;
+	height: 500px;
+	background: #fff;
+	position: absolute;
+	right: 50px;
+	top: 40px;
+}
+.productS h2{
+	font-size: 25px;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+.productS p {
+	line-height: 20px;
+	color: #9B9595;
+}
+.price {
+	width: 100%;
+	height: 50px;
+	background: #FDD9D9;
+	margin: 0 auto;
+	margin-top: 20px;
+	position: relative;
+}
+.price span {
+	position: absolute;
+	font-size: 13px;
+	top: 14px;
+	left: 16px;
+}
+.price strong {
+    position: absolute;
+    color: #FF3E00;
+    left: 90px;
+    top: 15px;
+    font-size: 25px;
+    font-weight: 20px;
+}
+.sign {
+	width: 60px;
+	height: 19px;
+	background: #FC680B;
+	color: white;
+	text-align: center;
+	position: absolute;
+	top: 15px;
+	left: 220px;
+}
+.place {
+	width: 100%;
+	height: 30px;
+	margin-top: 15px;
+}
+.place span,.ptype span,.count span {
+	font-size: 15px;
+	color: #8E8B8B;
+	margin-left: 20px;
+}
+.place input {
+    width: 300px;
+    height: 20px;
+}
+.ptype {
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	top: 100;
+}
+.ptype input {
+	width: 30px;
+	height: 16px;
+	font-size: 15px;
+}
+.count {
+	width: 100%;
+	height: 30px;
+	margin-top: 30px;
+}
+.count input {
+	width: 50px;
+	height: 20px;
+	float: left;
+	text-align: center;
+}
+.count span {
+	float: left;
+
+}
+.count i {
+	display: block;
+	width: 20px;
+	height: 25px;
+	background: #A4A0A0;
+	float: left;
+	font-style: normal;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 20px;
+}
+.add {
+	position: absolute;
+	left: 138px;
+}
+.buy {
+	width: 140px;
+	height: 40px;
+	position: relative;
+	left: 190px;
+	top: -70px;
+
+}
+.buy input {
+	width: 100%;
+	height: 100%;
+	color: #FA6500;
+	font-size: 20px;
+	background: #FDCEA1;
+	cursor: pointer;
+	margin-top: 30px;
+	margin-left: 20px;
+	float: left;
+}
+
+#demo {
+	display: block;
+	width: 400px;
+	height: 300px;
+	margin-left: 100px;
+	margin-top: 60px;
+	position: absolute;
+	background: #fff;
+}
+
+#small-box {
+    position: relative;
+    z-index: 1;
+}
+
+#float-box {
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    background: #ffffcc;
+    border: 1px solid #ccc;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    display: none;
+}
+
+#mark {
+    position: absolute;
+    display: block;
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    z-index: 10;
+}
+
+#big-box {
+    position: absolute;
+    display: none;
+    top: 0px;
+    left: 450px;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    z-index: 1;
+    background: #fff;
+}
+
+#big-box img {
+    position: absolute;
+    z-index: 5;
+}
+.m-sidebar{
+ 	position: fixed;
+ 	top: 0;right: 0;
+ 	background: #000;
+ 	z-index: 2000;
+ 	width: 35px;
+ 	height: 100%;
+ 	font-size: 12px;
+ 	color: #fff;
+ }
+.cart{
+	color: #fff;
+	text-align:center;
+	line-height: 20px;
+	padding: 200px 0 0 0px;
+}
+.cart span{
+	display:block;
+	width:20px;
+	margin:0 auto;
+}
+.cart i{
+	width:35px;
+	height:35px;
+	display:block; 
+	background:url(car.png) no-repeat;
+}
+#msg{
+	position:fixed;
+	top:300px; 
+	right:35px;
+	z-index:10000;
+	width:1px; 
+	height:52px;
+	line-height:52px; 
+	font-size:20px; 
+	text-align:center; 
+	color:#fff; 
+	background:#360;
+	display:none;
+}
+.u-flyer{
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	position: absolute;
+	top: 0px;
+	right: 100px;
+	z-index: 9999;
+}
+
+.butto{
+	width: 100px;
+	height: 20px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 16px/100% 'Microsoft yahei',Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	margin-top:50px;
+	margin-left:20px;
+}
+.butto:hover {
+	text-decoration: none;
+}
+.butto:active {
+	position: relative;
+	top: 1px;
+}
+/* orange */
+.orange {
+	color: #fef4e9;
+	border: solid 1px #da7c0c;
+	background: #f78d1d;
+}
+.orange:hover {
+	background: #f47c20;
+}
+.orange:active {
+	color: #fcd3a5;
+}
+form {
+	background: #F8F5F5;
+}
+.place {
+	padding-top: 50px;
+	margin-top: -20px;
+}
